@@ -3,88 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facebook Ad Funnel – STEMSphere Academy</title>
+  <title>Not Just Clicks — Facebook Ads That Convert</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-    }
-
-    header {
-      background-color: #006699;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000000; /* Deep black */
       color: #fff;
-      padding: 2em 1em;
       text-align: center;
     }
 
-    main {
-      padding: 2em;
-      max-width: 800px;
-      margin: auto;
+    header {
+      padding: 3em 1em 1em;
     }
 
-    .video-wrapper {
+    .title-group {
+      display: inline-block;
+      line-height: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .title-group span {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #FFDD00;
+      display: block;
+      letter-spacing: 1px;
+      line-height: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      color: #ccc;
+      font-weight: normal;
+      margin-top: 0.8em;
+    }
+
+    @media (max-width: 600px) {
+      .title-group span {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 2em 1em 3em;
+    }
+
+    .electric-frame {
+      position: relative;
+      padding: 10px;
+      border-radius: 12px;
+      margin: 2em auto;
+      background-color: #000;
+      box-shadow: 0 0 20px #fdf200, 0 0 40px #ffe600, 0 0 60px #fff000;
+      animation: flicker 1.5s infinite alternate;
+      max-width: 800px;
+    }
+
+    @keyframes flicker {
+      0% {
+        box-shadow: 0 0 15px #ffeb3b, 0 0 30px #fdf200, 0 0 45px #ffe600;
+      }
+      100% {
+        box-shadow: 0 0 25px #fdf200, 0 0 50px #fff000, 0 0 75px #ffeb3b;
+      }
+    }
+
+    .video-container {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      margin: 2em 0;
+      border-radius: 8px;
     }
 
-    .video-wrapper iframe {
+    .video-container iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
+      border-radius: 8px;
+      border: none;
     }
 
-    a.button {
-      text-decoration: none;
-      padding: 0.75em 1.5em;
-      background-color: #27ae60;
-      color: white;
-      border-radius: 4px;
-      display: inline-block;
-      margin: 1.5em 0;
+    p {
+      font-size: 1.15em;
+      color: #ccc;
+      margin-top: 2em;
+      line-height: 1.6em;
     }
 
     footer {
-      font-size: 0.8em;
-      color: #666;
-      margin-top: 3em;
-      text-align: center;
-      padding: 1em 0;
-      border-top: 1px solid #ccc;
-      background-color: #fff;
+      font-size: 0.85em;
+      color: #bbb;
+      padding: 2em 1em;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>Welcome to STEMSphere’s Ad Funnel</h1>
-    <p>Preview the campaigns driving our global learning mission</p>
+    <div class="title-group">
+      <span>Not Just Clicks.</span>
+      <span>Ads That Convert.</span>
+    </div>
+    <h2>Conversion Psychology → Emotional Resonance → Real Results</h2>
   </header>
 
   <main>
-    <h2>Latest Campaign Preview</h2>
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-        title="STEMSphere Facebook Ad Preview" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+    <div class="electric-frame">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="Not Just Clicks — Facebook Ads That Convert" allowfullscreen></iframe>
+      </div>
     </div>
 
-    <p>Ready to explore our lead magnet or sign up page?</p>
-    <a href="https://stemsphereacademy.thinkific.com" class="button">View Course Funnel</a>
+    <p><strong>Most people run Facebook ads. Few get results.</strong><br>
+    This video reveals how we turn ad clicks into conversions using audience psychology, copywriting mastery, and a proven blueprint that works across industries. Whether you’re a coach, author, ecommerce brand or educator — this method speaks your buyer’s language.</p>
+
+    <p>🚀 <strong>Inside the course:</strong><br>
+    Magnetic headlines. Imagery that triggers action. CTAs that compel. You’ll build ads that align with emotions — not just algorithms.</p>
+
+    <p><strong>Real stats:</strong><br>
+    4 out of 5 students increase leads, engagement, and ROAS in 3 weeks. No fluff. Just impact.</p>
+
+    <p>🔥 You’re not here for “better targeting.” You’re here to finally move people.<br>
+    👉 Tap to enroll — and let’s make your next ad your most profitable yet.</p>
   </main>
 
   <footer>
-    © 2025 STEMSphere Academy. All rights reserved. No reproduction allowed without permission.
+    © 2025 STEMSphere Academy. All rights reserved.
   </footer>
 </body>
 </html>

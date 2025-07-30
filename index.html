@@ -39,18 +39,20 @@
       margin-top: 0.8em;
     }
 
-    /* fluorescent gradient bar */
-    .theme-bar {
-      width: 100%;
-      padding: 0.6em 0;
-      margin: 1em 0;
-      background: linear-gradient(90deg, #00bfff, #ff1493);
-    }
-    .theme-bar span {
-      color: #fff;
+    /* fluorescent course-bar styling (same as other page) */
+    .course-bar {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4em 1em;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #00f8ff, #ff00d0);
       font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 1.1em;
+      font-size: 0.95em;
+      color: #fff;
+      margin-top: 0.6em;
+    }
+    .course-bar span + span {
+      margin-left: 0.5em;
     }
 
     @media (max-width: 600px) {
@@ -59,7 +61,7 @@
       .arrow-up { font-size: 1.8em; }
       .access-message { font-size: 1.2em; }
       .stat-message { font-size: 0.95em; }
-      .theme-bar span { font-size: 1em; }
+      .course-bar { font-size: 0.85em; }
     }
 
     main {
@@ -243,11 +245,14 @@
       <span>Ads That Convert.</span>
     </div>
     <h2>Strategy → Traffic → Measurable ROI</h2>
+    <div class="course-bar">
+      <span>Facebook Ads</span>
+      <span>|</span>
+      <span>Pinterest Ads</span>
+      <span>|</span>
+      <span>Templates & more</span>
+    </div>
   </header>
-
-  <div class="theme-bar">
-    <span>Facebook Ads | Pinterest Ads | Templates & more</span>
-  </div>
 
   <main>
     <div class="electric-frame">
@@ -289,9 +294,9 @@
     document.head.appendChild(tag);
 
     let player,
-        started = false,
-        pauseTime  = 267, // 4:27
-        signUpTime = 266,
+        started    = false,
+        pauseTime  = 267,  // 4:27
+        signUpTime = 266,  // 4:26
         intervalId,
         flags = { form: false, signUp: false };
 

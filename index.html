@@ -401,7 +401,31 @@
       color: #000;
     }
 
-    /* Full-bleed wrapper */
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 3em 1.5em;
+    }
+    .hero h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0.25em 0;
+    }
+    .hero .tagline {
+      font-size: 1.25em;
+      margin: 0.5em 0;
+    }
+    .hero .subtagline {
+      font-size: 1em;
+      margin: 0.5em 0;
+    }
+    .hero .watch-video {
+      font-size: 0.9em;
+      margin-top: 1em;
+      color: #666;
+    }
+
+    /* Full-bleed wrapper for the two colored sections */
     .full-bleed {
       position: relative;
       left: 50%;
@@ -416,7 +440,8 @@
     /* Background variants */
     .bg-yellow {
       background-color: #FFFDE7;
-      padding: 1.5em 1.5em 3em;
+      padding-top: 1.5em;
+      padding-bottom: 3em;
     }
     .bg-pink {
       background-color: #FFF4F7;
@@ -428,23 +453,21 @@
       margin: 0 auto;
     }
 
-    /* Headings */
+    /* Section headings */
     h2 {
       font-size: 1.5em;
       font-weight: bold;
       text-align: center;
       margin-bottom: 1em;
-      color: #000;
     }
     h3 {
       font-size: 1.25em;
       font-weight: bold;
       margin-top: 2em;
-      margin-bottom: .75em;
-      color: #000;
+      margin-bottom: 0.75em;
     }
 
-    /* Highlighted gradient text (for numbers only) */
+    /* Highlight only the numbers with gradient */
     .highlight {
       background: linear-gradient(120deg, #00bfff, #007fff);
       -webkit-background-clip: text;
@@ -453,7 +476,7 @@
       font-weight: bold;
     }
 
-    /* Check-list styling */
+    /* Shared checklist styles */
     .check-list {
       list-style: none;
       padding: 0;
@@ -475,12 +498,12 @@
       text-align: center;
       line-height: 1.2em;
       font-weight: bold;
-      font-size: .85em;
-      margin-right: .75em;
-      margin-top: .2em;
+      font-size: 0.85em;
+      margin-right: 0.75em;
+      margin-top: 0.2em;
     }
 
-    /* Override for pink-section checks: slim black ✓ */
+    /* Override for slim black checks in the pink block */
     .bg-pink .check-icon {
       background: none;
       border-radius: 0;
@@ -490,7 +513,7 @@
       line-height: 1;
       font-size: 1em;
       font-weight: normal;
-      margin-top: .1em;
+      margin-top: 0.1em;
     }
 
     /* Paragraph spacing */
@@ -499,8 +522,16 @@
     }
   </style>
 </head>
-
 <body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Not Just Clicks</h1>
+    <h1>Facebook Ads That Convert</h1>
+    <p class="tagline">Strategy → Traffic → Measurable ROI</p>
+    <p class="subtagline">Facebook Ads | Pinterest Ads | Templates &amp; more</p>
+    <p class="watch-video">↑↑↑ Watch Video for Access Details</p>
+  </section>
 
   <!-- START: Global Impact + Benefits Block -->
   <section class="full-bleed bg-yellow">
@@ -550,30 +581,30 @@
 
       <h3>High-Impact Services</h3>
       <ul class="check-list">
-        <li class="check-item"><span class="check-icon">✓</span>Business and Credit Consultants</li>
-        <li class="check-item"><span class="check-icon">✓</span>Online Coaches and Educators</li>
-        <li class="check-item"><span class="check-icon">✓</span>Financial Strategists and Advisors</li>
-        <li class="check-item"><span class="check-icon">✓</span>Digital Marketing Specialists</li>
-        <li class="check-item"><span class="check-icon">✓</span>SEO and Funnel Experts</li>
-        <li class="check-item"><span class="check-icon">✓</span>Hypnotherapists and Wellness Practitioners</li>
+        <li class="check-item"><span class="check-icon">✓</span> Business and Credit Consultants</li>
+        <li class="check-item"><span class="check-icon">✓</span> Online Coaches and Educators</li>
+        <li class="check-item"><span class="check-icon">✓</span> Financial Strategists and Advisors</li>
+        <li class="check-item"><span class="check-icon">✓</span> Digital Marketing Specialists</li>
+        <li class="check-item"><span class="check-icon">✓</span> SEO and Funnel Experts</li>
+        <li class="check-item"><span class="check-icon">✓</span> Hypnotherapists and Wellness Practitioners</li>
       </ul>
 
       <h3>Brick & Mortar Growth</h3>
       <ul class="check-list">
-        <li class="check-item"><span class="check-icon">✓</span>Restaurants and Hospitality Groups</li>
-        <li class="check-item"><span class="check-icon">✓</span>Physical Therapy and Chiropractic Clinics</li>
-        <li class="check-item"><span class="check-icon">✓</span>Construction Companies and Carpenters</li>
-        <li class="check-item"><span class="check-icon">✓</span>Automotive Dealerships</li>
-        <li class="check-item"><span class="check-icon">✓</span>Local Event Services and Repair Shops</li>
+        <li class="check-item"><span class="check-icon">✓</span> Restaurants and Hospitality Groups</li>
+        <li class="check-item"><span class="check-icon">✓</span> Physical Therapy and Chiropractic Clinics</li>
+        <li class="check-item"><span class="check-icon">✓</span> Construction Companies and Carpenters</li>
+        <li class="check-item"><span class="check-icon">✓</span> Automotive Dealerships</li>
+        <li class="check-item"><span class="check-icon">✓</span> Local Event Services and Repair Shops</li>
       </ul>
 
       <h3>Ecommerce Results</h3>
       <ul class="check-list">
-        <li class="check-item"><span class="check-icon">✓</span>Skincare and Wellness Brands</li>
-        <li class="check-item"><span class="check-icon">✓</span>Apparel and Accessories Stores</li>
-        <li class="check-item"><span class="check-icon">✓</span>Gourmet and Nutrition-Based Products</li>
-        <li class="check-item"><span class="check-icon">✓</span>Investing and Cryptocurrency Platforms</li>
-        <li class="check-item"><span class="check-icon">✓</span>Affiliate Shops and Niche Market Retailers</li>
+        <li class="check-item"><span class="check-icon">✓</span> Skincare and Wellness Brands</li>
+        <li class="check-item"><span class="check-icon">✓</span> Apparel and Accessories Stores</li>
+        <li class="check-item"><span class="check-icon">✓</span> Gourmet and Nutrition-Based Products</li>
+        <li class="check-item"><span class="check-icon">✓</span> Investing and Cryptocurrency Platforms</li>
+        <li class="check-item"><span class="check-icon">✓</span> Affiliate Shops and Niche Market Retailers</li>
       </ul>
     </div>
   </section>
@@ -581,3 +612,4 @@
 
 </body>
 </html>
+

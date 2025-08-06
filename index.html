@@ -575,102 +575,137 @@
 </section>
 <!-- END: Niche Diversity Block -->
 
-<!-- PRICING TIERS SCRIPT – START -->
-<script id="pricing-tiers-script">
-(function() {
-  // Ensure you have <div id="pricing-container"></div> in your HTML
-  const pricingContainer = document.getElementById('pricing-container');
-  if (!pricingContainer) return;
+<!-- PRICING TIERS STYLES -->
+<style>
+  #pricing-tiers {
+    background-color: #FFFBEA;
+    padding: 60px 20px;
+  }
 
-  // Tier definitions
-  const tiers = [
-    {
-      name: 'Ads Only Course',
-      price: '$150 one-time',
-      description: [
-        'Self-paced video modules',
-        'Downloadable template pack',
-        'Access to private community'
-      ],
-      stripeUrl: 'https://buy.stripe.com/placeholder1'
-    },
-    {
-      name: 'Done-With-You Accelerator',
-      price: '$797 / month',
-      description: [
-        '60-minute kickoff call',
-        'Pixel & tracking installation',
-        'Audience & funnel setup',
-        'Creative direction & copy guidance',
-        '7-day email support'
-      ],
-      stripeUrl: 'https://buy.stripe.com/placeholder2'
-    },
-    {
-      name: 'Done-For-You Ad Management',
-      price: '$3,000 / month + $1,000 setup fee',
-      description: [
-        'Full ad strategy & planning',
-        'Daily optimizations & budget pacing',
-        'Creative refreshes & guidance',
-        'Weekly 30-minute strategy calls',
-        'Detailed monthly performance reports'
-      ],
-      stripeUrl: 'https://buy.stripe.com/placeholder3'
+  #pricing-tiers .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  #pricing-tiers .tier-card {
+    flex: 1 1 30%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #pricing-tiers .tier-card h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+  }
+
+  #pricing-tiers .tier-card .price {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #333;
+  }
+
+  #pricing-tiers .tier-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 16px 0;
+    flex-grow: 1;
+  }
+
+  #pricing-tiers .tier-card ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  #pricing-tiers .tier-card ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: green;
+  }
+
+  #pricing-tiers .btn-enroll {
+    display: inline-block;
+    background: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.2s ease;
+  }
+
+  #pricing-tiers .btn-enroll:hover {
+    background: #005bb5;
+  }
+
+  /* Responsive tweak */
+  @media (max-width: 800px) {
+    #pricing-tiers .tier-card {
+      flex: 1 1 100%;
     }
-  ];
+  }
+</style>
 
-  // Build the section
-  const section = document.createElement('section');
-  section.style.backgroundColor = '#FFFBEA';  // light yellow background
-  section.style.padding = '2em 1em';
-
-  // Flex container for the cards
-  const wrapper = document.createElement('div');
-  wrapper.style.display = 'flex';
-  wrapper.style.justifyContent = 'space-between';
-  wrapper.style.flexWrap = 'wrap';
-  wrapper.style.maxWidth = '1200px';
-  wrapper.style.margin = '0 auto';
-
-  // Create a card for each tier
-  tiers.forEach(tier => {
-    const card = document.createElement('div');
-    card.style.flex = '1 1 30%';
-    card.style.backgroundColor = '#fff';
-    card.style.border = '1px solid #ddd';
-    card.style.borderRadius = '8px';
-    card.style.padding = '1.5em';
-    card.style.margin = '0.5em';
-
-    // Build the inner HTML
-    card.innerHTML = `
-      <h3 style="font-size:1.3em; margin-top:0;">${tier.name}</h3>
-      <p style="font-size:1.6em; font-weight:bold; margin:0.5em 0;">${tier.price}</p>
-      <ul style="padding-left:1.2em; margin:1em 0; line-height:1.5; color:#333;">
-        ${tier.description.map(item => `<li>✔ ${item}</li>`).join('')}
+<!-- PRICING TIERS SECTION -->
+<section id="pricing-tiers">
+  <div class="wrapper">
+    <!-- Tier 1 -->
+    <div class="tier-card">
+      <h3>Ads Only Course</h3>
+      <p class="price">$150 one-time</p>
+      <ul>
+        <li>Self-paced video modules</li>
+        <li>Downloadable template pack</li>
+        <li>Access to private community</li>
       </ul>
-      <a href="${tier.stripeUrl}" target="_blank" style="
-        display:inline-block;
-        background:#0073e6;
-        color:#fff;
-        text-decoration:none;
-        padding:0.75em 1.5em;
-        border-radius:4px;
-        font-weight:bold;
-        margin-top:1em;
-      ">
+      <a href="https://buy.stripe.com/placeholder1" class="btn-enroll" target="_blank">
         Enroll Now
       </a>
-    `;
-    wrapper.appendChild(card);
-  });
+    </div>
 
-  section.appendChild(wrapper);
-  pricingContainer.appendChild(section);
-})();
-</script>
-<!-- PRICING TIERS SCRIPT – END -->
+    <!-- Tier 2 -->
+    <div class="tier-card">
+      <h3>Done-With-You Accelerator</h3>
+      <p class="price">$797 / month</p>
+      <ul>
+        <li>60-minute kickoff call</li>
+        <li>Pixel & tracking installation</li>
+        <li>Audience & funnel setup</li>
+        <li>Creative direction & copy guidance</li>
+        <li>7-day email support</li>
+      </ul>
+      <a href="https://buy.stripe.com/placeholder2" class="btn-enroll" target="_blank">
+        Enroll Now
+      </a>
+    </div>
 
-<!-- PLACEHOLDER: Insert this DIV where you want the pricing section to appear -->
-<div id="pricing-container"></div>
+    <!-- Tier 3 -->
+    <div class="tier-card">
+      <h3>Done-For-You Ad Management</h3>
+      <p class="price">$3,000 / month + $1,000 setup</p>
+      <ul>
+        <li>Full ad strategy & planning</li>
+        <li>Daily optimizations & budget pacing</li>
+        <li>Creative refreshes & guidance</li>
+        <li>Weekly 30-minute strategy calls</li>
+        <li>Detailed monthly performance reports</li>
+      </ul>
+      <a href="https://buy.stripe.com/placeholder3" class="btn-enroll" target="_blank">
+        Enroll Now
+      </a>
+    </div>
+  </div>
+</section>
+

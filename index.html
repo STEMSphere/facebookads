@@ -577,45 +577,57 @@
 
 <!-- START PRICING TIERS -->
 <style>
-  .pulsate {
-    animation: pulsate 2s ease-in-out infinite;
+  /* prevent any element from pushing page wider */
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* Pulsate + glow keyframes */
   @keyframes pulsate {
+    0%, 100% { transform: scale(1); }
+    50%     { transform: scale(1.04); }
+  }
+  @keyframes glow {
     0%, 100% {
-      transform: scale(1);
+      box-shadow: 0 0 6px rgba(50,205,50,0.6), 0 0 12px rgba(50,205,50,0.4);
     }
     50% {
-      transform: scale(1.04);
+      box-shadow: 0 0 12px rgba(50,205,50,0.8), 0 0 24px rgba(50,205,50,0.6);
     }
   }
 
+  /* Container */
   .pricing-tiers {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    padding: 0 1em;
   }
   .pricing-tier {
     flex: 1 1 30%;
+    max-width: 30%;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 24px;
     text-align: left;
   }
-  @media (max-width: 768px) {
-    .pricing-tier {
-      flex: 1 1 100%;
-    }
-  }
+
+  /* Tier Title now metallic red */
   .pricing-tier h3 {
     font-size: 1.4em;
     margin-top: 0;
     font-weight: bold;
-    background: linear-gradient(120deg, #00bfff, #007fff);
+    background: linear-gradient(120deg, #FF4D4D, #B30000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .pricing-tier p.price {
     font-size: 1.6em;
     font-weight: bold;
@@ -630,6 +642,8 @@
   .pricing-tier .features p {
     margin: 8px 0;
   }
+
+  /* Pulsate + glow on buttons */
   .pricing-tier a.button {
     display: inline-block;
     background: #32CD32;
@@ -639,11 +653,39 @@
     border-radius: 4px;
     font-weight: bold;
     margin-top: 16px;
+    animation: pulsate 2s ease-in-out infinite,
+               glow    2s ease-in-out infinite;
+  }
+
+  /* Section wrapper */
+  section.pricing {
+    background-color: #FFFBEA;
+    width: 100%;
+    padding: 3em 1.5em;
+    text-align: center;
+  }
+  section.pricing .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* MOBILE FIXES */
+  @media (max-width: 768px) {
+    section.pricing {
+      padding: 2em 1em;
+    }
+    .pricing-tiers {
+      gap: 1em;
+    }
+    .pricing-tier {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 </style>
 
-<section style="background-color: #FFFBEA; width: 100%; padding: 3em 1.5em; text-align: center;">
-  <div style="max-width: 1200px; margin: 0 auto;">
+<section class="pricing">
+  <div class="container">
     <div class="pricing-tiers">
 
       <!-- Tier 1 -->
@@ -659,7 +701,7 @@
           <p>✔ Pinterest Ads</p>
         </div>
         <a href="https://buy.stripe.com/3cI3cuevT3PS35Jdk333W3h"
-           class="button pulsate"
+           class="button"
            target="_blank">
           Enroll Now
         </a>
@@ -673,13 +715,13 @@
           <p>✔ We help you launch your next ad</p>
           <p>✔ Launching of 1 campaign (up to 3 ads included)</p>
           <p>✔ Pixel & tracking install</p>
-          <p>✔ Audience and funnel configuration (1 campaign, up to 3 ad sets)</p>
+          <p>✔ Audience and funnel configuration</p>
           <p>✔ Creative direction: headline, copy, and design notes</p>
-          <p>✔ 7-day email support (for tweaks and observations)</p>
+          <p>✔ 7-day email support</p>
           <p>💡 Helps DIY buyers who need hands-off setup</p>
         </div>
         <a href="https://buy.stripe.com/9B6dR83Rf9ac0XB5RB33W3i"
-           class="button pulsate"
+           class="button"
            target="_blank">
           Enroll Now
         </a>
@@ -695,17 +737,17 @@
           <p>✨ Custom diagnostics</p>
           <p>✔ Ads spend leak detection</p>
           <p>✔ Traffic precision</p>
-          <p>✔ Secrest to saving thousands</p>
+          <p>✔ Secret to saving thousands</p>
           <p>✔ Your shortcut to scale</p>
         </div>
         <p style="margin-top: 16px; color: #000;">
-          Please email us if you have any questions before purchasing this premium session at
-          <a href="mailto:support@stemsphere.academy" style="color: #00bfff;">
+          Questions? Email
+          <a href="mailto:support@stemsphere.academy" style="color: #B30000;">
             support@stemsphere.academy
           </a>
         </p>
         <a href="https://buy.stripe.com/6oU6oG87vbikbCfeo733W3k"
-           class="button pulsate"
+           class="button"
            target="_blank">
           Book Your CEO Strategy Hour
         </a>
@@ -715,4 +757,3 @@
   </div>
 </section>
 <!-- END PRICING TIERS -->
-

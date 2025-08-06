@@ -578,14 +578,14 @@
 <!-- START PRICING TIERS -->
 <style>
   .pulsate {
-    animation: glow 2s ease-in-out infinite;
+    animation: pulsate 2s ease-in-out infinite;
   }
-  @keyframes glow {
+  @keyframes pulsate {
     0%, 100% {
-      box-shadow: 0 0 4px rgba(50,205,50,0.5);
+      transform: scale(1);
     }
     50% {
-      box-shadow: 0 0 12px rgba(50,205,50,0.8);
+      transform: scale(1.04);
     }
   }
 
@@ -608,21 +608,49 @@
       flex: 1 1 100%;
     }
   }
+  .pricing-tier h3 {
+    font-size: 1.4em;
+    margin-top: 0;
+    font-weight: bold;
+    background: linear-gradient(120deg, #00bfff, #007fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .pricing-tier p.price {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #000;
+  }
+  .pricing-tier .features {
+    color: #000;
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  .pricing-tier .features p {
+    margin: 8px 0;
+  }
+  .pricing-tier a.button {
+    display: inline-block;
+    background: #32CD32;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 16px;
+  }
 </style>
 
 <section style="background-color: #FFFBEA; width: 100%; padding: 3em 1.5em; text-align: center;">
   <div style="max-width: 1200px; margin: 0 auto;">
     <div class="pricing-tiers">
 
-      <!-- Tier 1: Full Facebook Ads Course -->
+      <!-- Tier 1 -->
       <div class="pricing-tier">
-        <h3 style="font-size: 1.4em; margin-top: 0; color: #00d8ff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-          Full Facebook Ads Course
-        </h3>
-        <p style="font-size: 1.6em; font-weight: bold; margin: 12px 0; color: #000;">
-          $150
-        </p>
-        <div style="color: #000; padding-left: 1.5em; margin-bottom: 1.5em;">
+        <h3>Full Facebook Ads Course</h3>
+        <p class="price">$150</p>
+        <div class="features">
           <p>✔ 1 year course access</p>
           <p>✔ All 19 chapters</p>
           <p>✔ Instagram ads</p>
@@ -631,22 +659,17 @@
           <p>✔ Pinterest Ads</p>
         </div>
         <a href="https://buy.stripe.com/3cI3cuevT3PS35Jdk333W3h"
-           target="_blank"
-           class="pulsate"
-           style="display: inline-block; background: #32CD32; color: #000; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: bold; margin-top: 16px;">
+           class="button pulsate"
+           target="_blank">
           Enroll Now
         </a>
       </div>
 
-      <!-- Tier 2: Done-With-You Accelerator -->
+      <!-- Tier 2 -->
       <div class="pricing-tier">
-        <h3 style="font-size: 1.4em; margin-top: 0; color: #00d8ff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-          Done-With-You Accelerator
-        </h3>
-        <p style="font-size: 1.6em; font-weight: bold; margin: 12px 0; color: #000;">
-          $797
-        </p>
-        <div style="color: #000; padding-left: 1.5em; margin-bottom: 1.5em;">
+        <h3>Done-With-You Accelerator</h3>
+        <p class="price">$797</p>
+        <div class="features">
           <p>✔ We help you launch your next ad</p>
           <p>✔ Launching of 1 campaign (up to 3 ads included)</p>
           <p>✔ Pixel & tracking install</p>
@@ -656,22 +679,17 @@
           <p>💡 Helps DIY buyers who need hands-off setup</p>
         </div>
         <a href="https://buy.stripe.com/9B6dR83Rf9ac0XB5RB33W3i"
-           target="_blank"
-           class="pulsate"
-           style="display: inline-block; background: #32CD32; color: #000; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: bold; margin-top: 16px;">
+           class="button pulsate"
+           target="_blank">
           Enroll Now
         </a>
       </div>
 
-      <!-- Tier 3: CEO Strategy Hour -->
+      <!-- Tier 3 -->
       <div class="pricing-tier">
-        <h3 style="font-size: 1.4em; margin-top: 0; color: #00d8ff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-          CEO Strategy Hour
-        </h3>
-        <p style="font-size: 1.6em; font-weight: bold; margin: 12px 0; color: #000;">
-          $500
-        </p>
-        <div style="color: #000; padding-left: 1.5em; margin-bottom: 1.5em;">
+        <h3>CEO Strategy Hour</h3>
+        <p class="price">$500</p>
+        <div class="features">
           <p>✔ VIP Intensive Day (4h workshop or 2×2h workshops)</p>
           <p>⚡ 4 Strategy Power hours with our CEO</p>
           <p>✨ Custom diagnostics</p>
@@ -682,14 +700,13 @@
         </div>
         <p style="margin-top: 16px; color: #000;">
           Please email us if you have any questions before purchasing this premium session at
-          <a href="mailto:support@stemsphere.academy" style="color: #00d8ff;">
+          <a href="mailto:support@stemsphere.academy" style="color: #00bfff;">
             support@stemsphere.academy
           </a>
         </p>
         <a href="https://buy.stripe.com/6oU6oG87vbikbCfeo733W3k"
-           target="_blank"
-           class="pulsate"
-           style="display: inline-block; background: #32CD32; color: #000; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: bold; margin-top: 8px;">
+           class="button pulsate"
+           target="_blank">
           Book Your CEO Strategy Hour
         </a>
       </div>
@@ -698,3 +715,4 @@
   </div>
 </section>
 <!-- END PRICING TIERS -->
+

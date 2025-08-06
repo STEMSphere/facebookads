@@ -856,66 +856,10 @@
 </style>
 <!-- END: 100% Risk-Free Guarantee Block -->
 
-<!-- START: FAQ & Privacy Modals -->
-
-<style>
-  /* Modal overlay */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    overflow-y: auto;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  /* Modal content box */
-  .modal-content {
-    background: #fff;
-    margin: 5% auto;
-    padding: 2em;
-    border-radius: 8px;
-    max-width: 600px;
-    position: relative;
-  }
-  /* Close button */
-  .modal-content .close {
-    position: absolute;
-    right: 1em; top: 1em;
-    font-size: 1.4em;
-    cursor: pointer;
-  }
-  /* Reuse existing FAQ styles inside modal */
-  #faq-modal details {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 0.8em;
-    padding: 0.8em;
-  }
-  #faq-modal summary {
-    font-weight: 600;
-    cursor: pointer;
-  }
-  #faq-modal p {
-    margin-top: 0.6em;
-    line-height: 1.4;
-  }
-  /* Privacy policy simple formatting */
-  #privacy-modal h2 {
-    margin-top: 0;
-  }
-  #privacy-modal p {
-    line-height: 1.5;
-    margin-bottom: 1em;
-  }
-</style>
-
-<!-- Modals HTML -->
-<div id="faq-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Frequently Asked Questions</h2>
+<!-- START: FAQ Section -->
+<section class="faq-section">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <div class="faq-container">
     <details>
       <summary>What results can I expect from this course?</summary>
       <p>Most students begin seeing measurable improvements in ad performance within 30–60 days after launching their ads. Results vary based on implementation, niche, and budget—but we provide templates and strategies proven to drive ROI.</p>
@@ -926,7 +870,7 @@
     </details>
     <details>
       <summary>Does this cover more than just Facebook Ads?</summary>
-      <p>Yes! You’ll learn strategies for Facebook, Instagram, Pinterest, and YouTube—plus how to repurpose creatives across platforms for maximum impact.</p>
+      <p>Yes! You’ll learn strategies for Facebook, Instagram, Pinterest, and even YouTube—plus how to repurpose creatives across platforms for maximum impact.</p>
     </details>
     <details>
       <summary>Will I get help setting up my pixel, funnel, or tracking?</summary>
@@ -949,56 +893,70 @@
       <p>We offer a 100% money-back guarantee if you implement the system and don’t see an increase in traffic. Your success is our priority.</p>
     </details>
   </div>
-</div>
+</section>
 
-<div id="privacy-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Privacy Policy</h2>
-    <p>At STEMSphere Academy, your privacy matters. We collect only the information you provide (name, email, payment details) to process your enrollment, deliver course materials, and provide support.</p>
-    <p>We employ industry-standard security measures (SSL encryption, secure servers) to safeguard your data. We do not sell or rent your personal information to third parties.</p>
-    <p>We may share limited data with service providers (Stripe, email platform) solely to fulfill our contract with you. You can always review, update, or delete your profile by contacting support.</p>
-    <p>By using our site, you consent to this policy. For questions or requests regarding your data, email us at <a href="mailto:support@stemsphere.academy">support@stemsphere.academy</a>.</p>
-  </div>
-</div>
+<!-- Styles -->
+<style>
+  .faq-section {
+    background: #111;
+    color: #fff;
+    padding: 3em 1.5em;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 
-<script>
-  // open modal
-  document.querySelectorAll('.open-modal').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      const modal = document.getElementById(btn.dataset.modal);
-      modal.style.display = 'block';
-    });
-  });
+  .faq-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #FFD700;
+  }
 
-  // close modal
-  document.querySelectorAll('.modal .close').forEach(x => {
-    x.addEventListener('click', () => {
-      x.closest('.modal').style.display = 'none';
-    });
-  });
+  .faq-container details {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    padding: 1em;
+    cursor: pointer;
+  }
 
-  // click outside
-  window.addEventListener('click', e => {
-    if (e.target.classList.contains('modal')) {
-      e.target.style.display = 'none';
+  .faq-container summary {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #00f8ff;
+  }
+
+  .faq-container p {
+    margin-top: 0.8em;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #ccc;
+  }
+
+  @media (max-width: 600px) {
+    .faq-title {
+      font-size: 1.5em;
     }
-  });
-</script>
+    .faq-container summary {
+      font-size: 1em;
+    }
+    .faq-container p {
+      font-size: 0.9em;
+    }
+  }
+</style>
+<!-- END: FAQ Section -->
 
-<!-- Update your footer links like this -->
+<!-- START: Footer -->
 <footer style="background: #000; color: #bbb; padding: 2em 1em; text-align: center; font-size: 0.85em;">
   <p>© 2025 STEMSphere Academy. All rights reserved.</p>
   <p>
-    <a href="#" class="open-modal" data-modal="faq-modal" style="color: #00bfff; text-decoration: underline; margin-right: 1em;">
-      FAQs
-    </a>
-    <a href="#" class="open-modal" data-modal="privacy-modal" style="color: #00bfff; text-decoration: underline;">
-      Privacy Policy
-    </a>
+    <a href="#faq" style="color: #00bfff; text-decoration: underline; margin-right: 1em;">FAQs</a>
+    <a href="#privacy-policy" style="color: #00bfff; text-decoration: underline;">Privacy Policy</a>
   </p>
   <p>Need help? Contact us at <a href="mailto:support@stemsphere.academy" style="color: #FFD700;">support@stemsphere.academy</a></p>
 </footer>
-
-<!-- END: FAQ & Privacy Modals -->
+<!-- END: Footer -->

@@ -575,7 +575,7 @@
 </section>
 <!-- END: Niche Diversity Block -->
 
-<!-- PRICING TIERS STYLES -->
+<!-- UPDATED PRICING TIERS STYLES -->
 <style>
   #pricing-tiers {
     background-color: #FFFBEA;
@@ -600,6 +600,7 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
+    color: #000;
   }
 
   #pricing-tiers .tier-card h3 {
@@ -611,7 +612,7 @@
     font-size: 1.6em;
     font-weight: bold;
     margin: 12px 0;
-    color: #333;
+    color: #000;
   }
 
   #pricing-tiers .tier-card ul {
@@ -625,6 +626,7 @@
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
+    color: #000;
   }
 
   #pricing-tiers .tier-card ul li:before {
@@ -634,20 +636,29 @@
     color: green;
   }
 
-  #pricing-tiers .btn-enroll {
+  .btn-enroll {
     display: inline-block;
-    background: #0073e6;
-    color: #fff;
+    background: #32CD32;
+    color: #000;
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 4px;
     font-weight: bold;
     text-align: center;
-    transition: background 0.2s ease;
+    margin-top: 16px;
+    animation: pulse 2s infinite;
   }
 
-  #pricing-tiers .btn-enroll:hover {
-    background: #005bb5;
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(50,205,50,0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(50,205,50,0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(50,205,50,0);
+    }
   }
 
   /* Responsive tweak */
@@ -658,17 +669,19 @@
   }
 </style>
 
-<!-- PRICING TIERS SECTION -->
+<!-- UPDATED PRICING TIERS SECTION -->
 <section id="pricing-tiers">
   <div class="wrapper">
+
     <!-- Tier 1 -->
     <div class="tier-card">
-      <h3>Ads Only Course</h3>
+      <h3>Full Facebook Ads Course</h3>
       <p class="price">$150 one-time</p>
       <ul>
-        <li>Self-paced video modules</li>
-        <li>Downloadable template pack</li>
-        <li>Access to private community</li>
+        <li>Instagram ads</li>
+        <li>Using YouTube</li>
+        <li>7 figure copy paste ads template</li>
+        <li>Pinterest Ads</li>
       </ul>
       <a href="https://buy.stripe.com/placeholder1" class="btn-enroll" target="_blank">
         Enroll Now
@@ -680,11 +693,13 @@
       <h3>Done-With-You Accelerator</h3>
       <p class="price">$797 / month</p>
       <ul>
-        <li>60-minute kickoff call</li>
+        <li>90-minute weekly group call with up to 8 people</li>
         <li>Pixel & tracking installation</li>
         <li>Audience & funnel setup</li>
         <li>Creative direction & copy guidance</li>
         <li>7-day email support</li>
+        <li>Extra $1,500 for creatives if needed</li>
+        <li>Covers ads that spend $30k and under/month; upgrade anytime</li>
       </ul>
       <a href="https://buy.stripe.com/placeholder2" class="btn-enroll" target="_blank">
         Enroll Now
@@ -706,6 +721,6 @@
         Enroll Now
       </a>
     </div>
+
   </div>
 </section>
-

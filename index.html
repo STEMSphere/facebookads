@@ -575,3 +575,66 @@
 </section>
 <!-- END: Niche Diversity Block -->
 
+<!-- PRICING TIERS SCRIPT – START -->
+<script>
+  (function(){
+    // 1. CONFIGURATION: define your three tiers
+    const pricingTiers = [
+      {
+        id: 'tier1',
+        name: 'Ads Only Course',
+        priceDisplay: '$150 one-time',
+        stripeUrl: 'https://buy.stripe.com/placeholder1'
+      },
+      {
+        id: 'tier2',
+        name: 'Done-With-You Accelerator',
+        priceDisplay: '$797 / month',
+        stripeUrl: 'https://buy.stripe.com/placeholder2'
+      },
+      {
+        id: 'tier3',
+        name: 'Done-For-You Ad Management',
+        priceDisplay: '$3,000 / month + $1,000 setup fee',
+        stripeUrl: 'https://buy.stripe.com/placeholder3'
+      }
+    ];
+
+    // 2. RENDER FUNCTION: builds the HTML for each tier
+    function renderPricingTiers(containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        console.warn('Pricing container not found:', containerId);
+        return;
+      }
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'pricing-tiers';
+
+      pricingTiers.forEach(tier => {
+        const box = document.createElement('div');
+        box.id = tier.id;
+        box.className = 'pricing-tier';
+        box.innerHTML = `
+          <h3>${tier.name}</h3>
+          <p class="price">${tier.priceDisplay}</p>
+          <a href="${tier.stripeUrl}" class="btn btn-stripe" target="_blank">
+            Enroll Now
+          </a>
+        `;
+        wrapper.appendChild(box);
+      });
+
+      container.appendChild(wrapper);
+    }
+
+    // 3. INIT: wait for DOM, then render into #pricing-container
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPricingTiers('pricing-container');
+    });
+  })();
+</script>
+<!-- PRICING TIERS SCRIPT – END -->
+
+<!-- PLACEHOLDER: drop this DIV in your HTML where you want the tiers to appear -->
+<div id="pricing-container"></div>

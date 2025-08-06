@@ -576,18 +576,16 @@
 <!-- END: Niche Diversity Block -->
 
 <!-- START PRICING TIERS -->
+
 <style>
+  /* Full-width pink-styled background and centered text */
   #pricing-tiers {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    width: 100vw;
-    background-color: #FFFBEA;
-    padding: 60px 20px;
-    box-sizing: border-box;
+    background-color: #FFF4F7;
+    width: 100%;
+    padding: 3em 1.5em;
+    text-align: center;
   }
+  /* Container for cards */
   #pricing-tiers .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -596,6 +594,7 @@
     gap: 20px;
     justify-content: space-between;
   }
+  /* Individual tier cards */
   #pricing-tiers .tier-card {
     flex: 1 1 30%;
     background: #fff;
@@ -610,6 +609,7 @@
   #pricing-tiers .tier-card h3 {
     margin-top: 0;
     font-size: 1.4em;
+    color: #000;
   }
   #pricing-tiers .tier-card .price {
     font-size: 1.6em;
@@ -617,23 +617,18 @@
     margin: 12px 0;
     color: #000;
   }
-  #pricing-tiers .tier-card ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 16px 0;
+  /* Feature list styled like niche block */
+  #pricing-tiers .features {
+    text-align: left;
     flex-grow: 1;
+    margin: 16px 0;
+    padding-left: 1.5em;
   }
-  #pricing-tiers .tier-card ul li {
+  #pricing-tiers .features p {
     margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
+    color: #000;
   }
-  #pricing-tiers .tier-card ul li:before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: green;
-  }
+  /* Enroll button */
   #pricing-tiers .btn-enroll {
     display: inline-block;
     background: #32CD32;
@@ -642,9 +637,8 @@
     padding: 12px 24px;
     border-radius: 4px;
     font-weight: bold;
-    text-align: center;
-    margin-top: 16px;
     animation: pulse 2s infinite;
+    margin-top: 16px;
   }
   @keyframes pulse {
     0% {
@@ -671,12 +665,12 @@
     <div class="tier-card">
       <h3>Full Facebook Ads Course</h3>
       <p class="price">$150 one-time</p>
-      <ul>
-        <li>Instagram ads</li>
-        <li>Using YouTube</li>
-        <li>7 figure copy paste ads template</li>
-        <li>Pinterest Ads</li>
-      </ul>
+      <div class="features">
+        <p>✔ Instagram ads</p>
+        <p>✔ Using YouTube</p>
+        <p>✔ 7 figure copy paste ads template</p>
+        <p>✔ Pinterest Ads</p>
+      </div>
       <a href="https://buy.stripe.com/3cI3cuevT3PS35Jdk333W3h" class="btn-enroll" target="_blank">
         Enroll Now
       </a>
@@ -686,14 +680,14 @@
     <div class="tier-card">
       <h3>Done-With-You Accelerator</h3>
       <p class="price">$797 / month</p>
-      <ul>
-        <li>60-minute weekly group call with up to 8 people</li>
-        <li>Pixel & tracking installation</li>
-        <li>Audience & funnel configuration (1 campaign, up to 3 ad sets)</li>
-        <li>Creative direction: headline, copy, and design notes</li>
-        <li>7-day email support (for tweaks and observations)</li>
-        <li>Helps DIY buyers who need hands-off setup</li>
-      </ul>
+      <div class="features">
+        <p>✔ 60-minute kickoff call (group account access or screenshots)</p>
+        <p>✔ Pixel & tracking install</p>
+        <p>✔ Audience and funnel configuration (1 campaign, up to 3 ad sets)</p>
+        <p>✔ Creative direction: headline, copy, and design notes</p>
+        <p>✔ 7-day email support (for tweaks and observations)</p>
+        <p>✔ Helps DIY buyers who need hands-off setup</p>
+      </div>
       <a href="https://buy.stripe.com/9B6dR83Rf9ac0XB5RB33W3i" class="btn-enroll" target="_blank">
         Enroll Now
       </a>
@@ -703,12 +697,12 @@
     <div class="tier-card">
       <h3>Done-For-You Ad Management</h3>
       <p class="price">$3,000 / month + $1,000 setup</p>
-      <ul>
-        <li>Launching 1 campaign (up to 3 ads included)</li>
-        <li>Extra $1,500 for creatives if needed</li>
-        <li>Covers ads that spend $30k and under/month; upgrade higher whenever you want</li>
-        <li>If you’ve never made sales, start with the course or Accelerator first</li>
-      </ul>
+      <div class="features">
+        <p>✔ Launching 1 campaign (up to 3 ads included)</p>
+        <p>✔ Extra $1,500 for creatives if needed</p>
+        <p>✔ Covers ads spending $30k and under/month; upgrade higher anytime</p>
+        <p>✔ If you’ve never made sales, start with the course or Accelerator first</p>
+      </div>
       <a href="https://buy.stripe.com/bJefZgfzX8689u75RB33W3j" class="btn-enroll" target="_blank">
         Enroll Now
       </a>
@@ -716,4 +710,5 @@
 
   </div>
 </section>
+
 <!-- END PRICING TIERS -->

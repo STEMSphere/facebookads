@@ -578,25 +578,45 @@
 <!-- START PRICING TIERS -->
 <style>
   .pulsate {
-    animation: glow 1.5s ease-in-out infinite;
+    animation: glow 2s ease-in-out infinite;
   }
   @keyframes glow {
     0%, 100% {
-      box-shadow: 0 0 8px rgba(50,205,50,0.8);
+      box-shadow: 0 0 4px rgba(50,205,50,0.5);
     }
     50% {
-      box-shadow: 0 0 20px rgba(50,205,50,1);
+      box-shadow: 0 0 12px rgba(50,205,50,0.8);
+    }
+  }
+
+  .pricing-tiers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .pricing-tier {
+    flex: 1 1 30%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: left;
+  }
+  @media (max-width: 768px) {
+    .pricing-tier {
+      flex: 1 1 100%;
     }
   }
 </style>
 
 <section style="background-color: #FFFBEA; width: 100%; padding: 3em 1.5em; text-align: center;">
   <div style="max-width: 1200px; margin: 0 auto;">
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
+    <div class="pricing-tiers">
 
       <!-- Tier 1: Full Facebook Ads Course -->
-      <div style="flex: 1 1 30%; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; text-align: left;">
-        <h3 style="font-size: 1.4em; margin-top: 0; color: #0073e6; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+      <div class="pricing-tier">
+        <h3 style="font-size: 1.4em; margin-top: 0; color: #00d8ff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
           Full Facebook Ads Course
         </h3>
         <p style="font-size: 1.6em; font-weight: bold; margin: 12px 0; color: #000;">
@@ -619,8 +639,8 @@
       </div>
 
       <!-- Tier 2: Done-With-You Accelerator -->
-      <div style="flex: 1 1 30%; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; text-align: left;">
-        <h3 style="font-size: 1.4em; margin-top: 0; color: #0073e6; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+      <div class="pricing-tier">
+        <h3 style="font-size: 1.4em; margin-top: 0; color: #00d8ff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
           Done-With-You Accelerator
         </h3>
         <p style="font-size: 1.6em; font-weight: bold; margin: 12px 0; color: #000;">
@@ -644,8 +664,8 @@
       </div>
 
       <!-- Tier 3: CEO Strategy Hour -->
-      <div style="flex: 1 1 30%; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; text-align: left;">
-        <h3 style="font-size: 1.4em; margin-top: 0; color: #0073e6; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+      <div class="pricing-tier">
+        <h3 style="font-size: 1.4em; margin-top: 0; color: #00d8ff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
           CEO Strategy Hour
         </h3>
         <p style="font-size: 1.6em; font-weight: bold; margin: 12px 0; color: #000;">
@@ -662,7 +682,7 @@
         </div>
         <p style="margin-top: 16px; color: #000;">
           Please email us if you have any questions before purchasing this premium session at
-          <a href="mailto:support@stemsphere.academy" style="color: #0073e6;">
+          <a href="mailto:support@stemsphere.academy" style="color: #00d8ff;">
             support@stemsphere.academy
           </a>
         </p>

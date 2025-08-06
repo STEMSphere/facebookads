@@ -576,65 +576,101 @@
 <!-- END: Niche Diversity Block -->
 
 <!-- PRICING TIERS SCRIPT – START -->
-<script>
-  (function(){
-    // 1. CONFIGURATION: define your three tiers
-    const pricingTiers = [
-      {
-        id: 'tier1',
-        name: 'Ads Only Course',
-        priceDisplay: '$150 one-time',
-        stripeUrl: 'https://buy.stripe.com/placeholder1'
-      },
-      {
-        id: 'tier2',
-        name: 'Done-With-You Accelerator',
-        priceDisplay: '$797 / month',
-        stripeUrl: 'https://buy.stripe.com/placeholder2'
-      },
-      {
-        id: 'tier3',
-        name: 'Done-For-You Ad Management',
-        priceDisplay: '$3,000 / month + $1,000 setup fee',
-        stripeUrl: 'https://buy.stripe.com/placeholder3'
-      }
-    ];
+<script id="pricing-tiers-script">
+(function() {
+  // Ensure you have <div id="pricing-container"></div> in your HTML
+  const pricingContainer = document.getElementById('pricing-container');
+  if (!pricingContainer) return;
 
-    // 2. RENDER FUNCTION: builds the HTML for each tier
-    function renderPricingTiers(containerId) {
-      const container = document.getElementById(containerId);
-      if (!container) {
-        console.warn('Pricing container not found:', containerId);
-        return;
-      }
-
-      const wrapper = document.createElement('div');
-      wrapper.className = 'pricing-tiers';
-
-      pricingTiers.forEach(tier => {
-        const box = document.createElement('div');
-        box.id = tier.id;
-        box.className = 'pricing-tier';
-        box.innerHTML = `
-          <h3>${tier.name}</h3>
-          <p class="price">${tier.priceDisplay}</p>
-          <a href="${tier.stripeUrl}" class="btn btn-stripe" target="_blank">
-            Enroll Now
-          </a>
-        `;
-        wrapper.appendChild(box);
-      });
-
-      container.appendChild(wrapper);
+  // Tier definitions
+  const tiers = [
+    {
+      name: 'Ads Only Course',
+      price: '$150 one-time',
+      description: [
+        'Self-paced video modules',
+        'Downloadable template pack',
+        'Access to private community'
+      ],
+      stripeUrl: 'https://buy.stripe.com/placeholder1'
+    },
+    {
+      name: 'Done-With-You Accelerator',
+      price: '$797 / month',
+      description: [
+        '60-minute kickoff call',
+        'Pixel & tracking installation',
+        'Audience & funnel setup',
+        'Creative direction & copy guidance',
+        '7-day email support'
+      ],
+      stripeUrl: 'https://buy.stripe.com/placeholder2'
+    },
+    {
+      name: 'Done-For-You Ad Management',
+      price: '$3,000 / month + $1,000 setup fee',
+      description: [
+        'Full ad strategy & planning',
+        'Daily optimizations & budget pacing',
+        'Creative refreshes & guidance',
+        'Weekly 30-minute strategy calls',
+        'Detailed monthly performance reports'
+      ],
+      stripeUrl: 'https://buy.stripe.com/placeholder3'
     }
+  ];
 
-    // 3. INIT: wait for DOM, then render into #pricing-container
-    document.addEventListener('DOMContentLoaded', () => {
-      renderPricingTiers('pricing-container');
-    });
-  })();
+  // Build the section
+  const section = document.createElement('section');
+  section.style.backgroundColor = '#FFFBEA';  // light yellow background
+  section.style.padding = '2em 1em';
+
+  // Flex container for the cards
+  const wrapper = document.createElement('div');
+  wrapper.style.display = 'flex';
+  wrapper.style.justifyContent = 'space-between';
+  wrapper.style.flexWrap = 'wrap';
+  wrapper.style.maxWidth = '1200px';
+  wrapper.style.margin = '0 auto';
+
+  // Create a card for each tier
+  tiers.forEach(tier => {
+    const card = document.createElement('div');
+    card.style.flex = '1 1 30%';
+    card.style.backgroundColor = '#fff';
+    card.style.border = '1px solid #ddd';
+    card.style.borderRadius = '8px';
+    card.style.padding = '1.5em';
+    card.style.margin = '0.5em';
+
+    // Build the inner HTML
+    card.innerHTML = `
+      <h3 style="font-size:1.3em; margin-top:0;">${tier.name}</h3>
+      <p style="font-size:1.6em; font-weight:bold; margin:0.5em 0;">${tier.price}</p>
+      <ul style="padding-left:1.2em; margin:1em 0; line-height:1.5; color:#333;">
+        ${tier.description.map(item => `<li>✔ ${item}</li>`).join('')}
+      </ul>
+      <a href="${tier.stripeUrl}" target="_blank" style="
+        display:inline-block;
+        background:#0073e6;
+        color:#fff;
+        text-decoration:none;
+        padding:0.75em 1.5em;
+        border-radius:4px;
+        font-weight:bold;
+        margin-top:1em;
+      ">
+        Enroll Now
+      </a>
+    `;
+    wrapper.appendChild(card);
+  });
+
+  section.appendChild(wrapper);
+  pricingContainer.appendChild(section);
+})();
 </script>
 <!-- PRICING TIERS SCRIPT – END -->
 
-<!-- PLACEHOLDER: drop this DIV in your HTML where you want the tiers to appear -->
+<!-- PLACEHOLDER: Insert this DIV where you want the pricing section to appear -->
 <div id="pricing-container"></div>

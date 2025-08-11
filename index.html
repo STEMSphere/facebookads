@@ -505,6 +505,228 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 </body>
 </html>
 
+<!-- BEGIN: What We Offer Section -->
+<section style="background:#000; color:#fff; padding:3em 1.5em; text-align:center;">
+  <h2 style="font-size:1.8em; font-weight:700; color:#FFD700; margin-bottom:1em;">
+    What We Offer
+  </h2>
+  <div style="max-width:800px; margin:0 auto; text-align:left;">
+
+    <!-- Starter Tier -->
+    <div style="margin-bottom:2em;">
+      <h3 style="color:#00f8ff;">🟢 Full Launch Kit: Full Course + eBook</h3>
+      <p>
+        Our flagship course for beginners and intermediate learners. Includes 19 chapters covering Facebook, Instagram, and Pinterest ads — Plus our 7 figure templates ebook: 100 Downloadable templates and frameworks used to run high-converting campaigns.
+      </p>
+      <p style="margin-top:1em; font-weight:bold; color:#FFD700;">
+        See price below
+      </p>
+    </div>
+
+    <!-- Done-With-You Tier -->
+    <div style="margin-bottom:2em;">
+      <h3 style="color:#FFA500;">🟠 Done-With-You Accelerator</h3>
+      <p>
+        A hands-on setup experience where we help you launch your next campaign. You provide the creatives, we configure your pixel, targeting, and ad structure — then hand it off with 7-day support. Perfect for DIY founders who want expert guidance.
+      </p>
+      <a href="#" data-calendly style="display:inline-block; margin-top:1em; padding:0.8em 1.5em;
+         background-color:#32CD32; color:#fff; font-weight:bold; font-size:1em; border-radius:8px;
+         text-decoration:none; box-shadow:0 0 10px #32CD32; animation:pulse 1.5s infinite; cursor:pointer;">
+        Join Us Live
+      </a>
+    </div>
+
+    <!-- VIP Tier -->
+    <div style="margin-bottom:2em;">
+      <h3 style="color:#B266FF;">🟣 VIP: Conversion Kickoff: Page + Ads Setup</h3>
+      <p>
+        Hands off setup. A one-time launch package for serious founders. Includes a custom landing page, up to 5 ad creatives, and a live strategy session. Ideal for product launches, service providers (like salons or barbershops), and anyone ready to scale with clarity — no monthly commitment required.
+      </p>
+      <a href="#" data-calendly style="display:inline-block; margin-top:1em; padding:0.8em 1.5em;
+         background-color:#32CD32; color:#fff; font-weight:bold; font-size:1em; border-radius:8px;
+         text-decoration:none; box-shadow:0 0 10px #32CD32; animation:pulse 1.5s infinite; cursor:pointer;">
+        Join Us Live
+      </a>
+    </div>
+
+    <!-- Calendly Embed Container -->
+    <div id="calendly-widget" style="margin-top:2em;"></div>
+  </div>
+</section>
+
+<!-- BEGIN: Calendly Inline Loader -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const calendlyContainer = document.getElementById('calendly-widget');
+    const buttons = document.querySelectorAll('[data-calendly]');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        calendlyContainer.innerHTML = '';
+
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://calendly.com/stemsphere-support/live-ads-page-diagnostics-with-stemsphere-academy?embed_domain=fbads.stemsphere.academy&embed_type=Inline';
+        iframe.width = '100%';
+        iframe.height = '630';
+        iframe.style.border = 'none';
+        iframe.setAttribute('title', 'Schedule your diagnostic workshop');
+        calendlyContainer.appendChild(iframe);
+
+        calendlyContainer.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  });
+</script>
+<!-- END: Calendly Inline Loader -->
+
+<!-- BEGIN: Pulse Animation -->
+<style>
+@keyframes pulse {
+  0%   { transform: scale(1);   box-shadow: 0 0 10px #32CD32; }
+  50%  { transform: scale(1.05); box-shadow: 0 0 20px #32CD32; }
+  100% { transform: scale(1);    box-shadow: 0 0 10px #32CD32; }
+}
+</style>
+<!-- END: Pulse Animation -->
+<!-- END Entire What We Offer Block -->
+
+<!-- START: Countdown Timer -->
+<script>
+(function(){
+  function getNextResetTime() {
+    const now = new Date();
+    const next = new Date(now);
+    const currentHour = now.getHours();
+    const nextHour = Math.ceil((currentHour + 1) / 6) * 6;
+    next.setHours(nextHour, 0, 0, 0);
+    if (next <= now) next.setHours(nextHour + 6, 0, 0, 0);
+    return next;
+  }
+
+  function updateCountdown() {
+    const now = new Date();
+    const resetTime = getNextResetTime();
+    const diff = resetTime - now;
+
+    const hrs = Math.floor(diff / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+
+    const display = document.getElementById("countdown-timer");
+    if (display) {
+      display.textContent =
+        String(hrs).padStart(2, '0') + ":" +
+        String(mins).padStart(2, '0') + ":" +
+        String(secs).padStart(2, '0');
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  });
+})();
+</script>
+<!-- END: Countdown Timer -->
+
+<!-- START: Payment Buttons -->
+<style>
+  .payment-card {
+    background-color: #fff;
+    color: #000;
+    padding: 3em 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .payment-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6em;
+    margin-top: 1.5em;
+  }
+
+  .payment-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.9em 1.2em;
+    font-weight: 700;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.15s ease;
+    animation: pulse 2.8s ease-in-out infinite;
+  }
+
+  .payment-buttons a:hover {
+    transform: translateY(-2px);
+  }
+
+  @keyframes pulse {
+    0%   { transform: scale(1); box-shadow: 0 0 0px rgba(0, 0, 0, 0.1); }
+    50%  { transform: scale(1.02); box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
+    100% { transform: scale(1); box-shadow: 0 0 0px rgba(0, 0, 0, 0.1); }
+  }
+
+  .btn-usa     { background-color: #1E3A8A; }
+  .btn-india   { background-color: #ff9900; }
+  .btn-nigeria { background-color: #065F46; }
+
+  .strike-price {
+    text-decoration: line-through;
+    color: #ccc;
+    font-weight: 400;
+    margin-left: 0.5em;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 600px) {
+    .payment-buttons a {
+      display: block;
+      width: 90%;
+      margin: 0.4em auto;
+      font-size: 1em;
+    }
+  }
+</style>
+
+<div class="payment-card">
+  <div style="text-align:center; font-weight:bold; font-size:1.4em; margin-bottom:0.4em;
+    background: linear-gradient(135deg, #B30000, #FF4D4D, #B30000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 2px rgba(255,0,0,0.3);">
+    Full Launch Kit Pricing
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 1.2em; margin-bottom: 0.6em;">
+    🚨 Limited-Time Offer — <span id="countdown-timer" style="color: #ff4d4d;">Loading...</span> remaining  
+    <br><span style="color:#B30000; font-weight:600;">Use code <strong>WINAUG25</strong> at checkout</span>
+  </div>
+  <div class="payment-intro" style="text-align: center; font-size: 1em; margin-bottom: 1em;">
+    🌐 Pay in USD (globally accepted), or INR or Naira
+  </div>
+  <div class="payment-buttons">
+    <a href="https://buy.stripe.com/3cI3cuevT3PS35Jdk333W3h" class="btn-usa">
+      🌍 Pay $75.99 USD <span class="strike-price">$149.99</span>
+    </a>
+    <a href="https://buy.stripe.com/7sY00icnL1HK5dR7ZJ33W3t" class="btn-india">
+      🇮🇳 Pay ₹4,999 INR <span class="strike-price">₹13,200</span>
+    </a>
+    <a href="https://paystack.com/buy/how-to-run-facebook-ads" class="btn-nigeria" target="_blank">
+      🇳🇬 Pay ₦49,999 Naira <span class="strike-price">₦230,000</span>
+    </a>
+  </div>
+</div>
+<!-- END: Payment Buttons -->
+
 <!-- BEGIN CALENDLY ZOOM DIAGNOSTIC WORKSHOP SECTION -->
 <section
   style="background-color:#FFFBEA; padding:2em 1em; text-align:center; font-family:'Segoe UI', sans-serif;"
@@ -859,28 +1081,6 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
   }
 </style>
 <!-- END: 100% Risk-Free Guarantee Block -->
-
-<!-- BEGIN: What We Offer Section -->
-<section style="background:#000; color:#fff; padding:3em 1.5em; text-align:center;">
-  <h2 style="font-size:1.8em; font-weight:700; color:#FFD700; margin-bottom:1em;">
-    What We Offer
-  </h2>
-  <div style="max-width:800px; margin:0 auto; text-align:left;">
-    <div style="margin-bottom:2em;">
-      <h3 style="color:#00f8ff;">🟢 Starter: Full Facebook Ads Course</h3>
-      <p>Our flagship course for beginners and intermediate learners. Includes 19 chapters covering Facebook, Instagram, and Pinterest ads — plus downloadable templates and frameworks used to run high-converting campaigns.</p>
-    </div>
-    <div style="margin-bottom:2em;">
-      <h3 style="color:#FFA500;">🟠 Done-With-You Accelerator</h3>
-      <p>A hands-on setup experience where we help you launch your next campaign. You provide the creatives, we configure your pixel, targeting, and ad structure — then hand it off with 7-day support. Perfect for DIY founders who want expert guidance.</p>
-    </div>
-    <div style="margin-bottom:2em;">
-      <h3 style="color:#B266FF;">🟣 VIP: Conversion Kickoff: Page + Ads Setup</h3>
-      <p> Hands off setup. A one-time launch package for serious founders. Includes a custom landing page, up to 5 ad creatives, and a live strategy session. Ideal for product launches, service providers (like salons or barbershops), and anyone ready to scale with clarity — no monthly commitment required.</p>
-    </div>
-  </div>
-</section>
-<!-- END: What We Offer Section -->
 
 <!-- START: FAQ Section -->
 <section class="faq-section">

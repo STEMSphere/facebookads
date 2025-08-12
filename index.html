@@ -681,6 +681,17 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
     box-sizing: border-box;
   }
 
+  .payment-image {
+    margin: 1.5em 0;
+    text-align: center;
+  }
+
+  .payment-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
   .payment-buttons {
     display: flex;
     flex-direction: column;
@@ -703,14 +714,12 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
     font-size: 1em;
     border-radius: 8px;
     transition: transform 0.15s ease;
-    /* removed box-shadow to eliminate glow */
   }
 
   .payment-buttons a:hover {
     transform: translateY(-2px);
   }
 
-  /* Freshened country‐specific colors */
   .btn-usa     { background-color: #4A90E2; }
   .btn-india   { background-color: #FF8C00; }
   .btn-nigeria { background-color: #2E7D32; }
@@ -767,6 +776,10 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
       margin-bottom: 1em;
     ">
     🌐 Pay in USD ( Converts globally), or INR or Naira
+  </div>
+
+  <div class="payment-image">
+    <img src="https://i.postimg.cc/jj3XJPMH/In-Shot-20250807-130152090.jpg" alt="Launch Kit Preview">
   </div>
 
   <div class="payment-buttons">

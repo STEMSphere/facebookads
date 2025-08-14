@@ -1276,7 +1276,8 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 <!-- Fullscreen Form Wizard -->
 <div id="adsWizard" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#ffffff; font-family:sans-serif; z-index:1000; overflow:hidden;">
   <div style="text-align:right; padding:20px;">
-    <button onclick="document.getElementById('adsWizard').style.display='none'"
+    <button id="adsCloseBtn"
+      onclick="document.getElementById('adsWizard').style.display='none'"
       style="font-size:20px; background:none; border:none; cursor:pointer;">&times;</button>
   </div>
   <div id="progressBar" style="height:10px; background:#e0e0e0; border-radius:5px; margin:0 20px 20px;">
@@ -1353,21 +1354,6 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
           There’s a reason our client retention is strong.
         </p>
         <div id="calendlyFrameContainer" style="width:100vw; height:100vh; position:relative;">
-          <button id="closeCalendlyBtn" style="
-            position:absolute;
-            top:20px;
-            right:20px;
-            z-index:9999;
-            background:#fff;
-            color:#000;
-            border:1px solid #ccc;
-            padding:8px 14px;
-            font-size:16px;
-            font-weight:bold;
-            border-radius:6px;
-            cursor:pointer;
-            display:none;
-          ">✕ Close</button>
           <div id="calendlyFrame" style="position:absolute; top:0; left:0; width:100%; height:100%;"></div>
         </div>`;
 
@@ -1393,12 +1379,8 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 
       window.addEventListener("message", function (e) {
         if (e.data.event && e.data.event.indexOf("calendly") !== -1) {
-          document.getElementById("closeCalendlyBtn").style.display = "block";
+          document.getElementById("adsCloseBtn").style.display = "inline";
         }
-      });
-
-      document.getElementById("closeCalendlyBtn").addEventListener("click", function () {
-        document.getElementById("adsWizard").style.display = "none";
       });
     }
   }

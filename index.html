@@ -1270,17 +1270,27 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 <!-- 🌟 BEGIN: STEMSphere Ads Intake Wizard + Calendly Launcher -->
 
 <!-- Floating Chat Icon -->
-<img src="https://i.postimg.cc/Ghv62pLP/1000066281.jpg" id="adsLauncher"
-  style="position:fixed; bottom:30px; right:30px; z-index:999; cursor:pointer; width:60px;" />
+<img
+  src="https://i.postimg.cc/GtB0mPMq/1000066282.jpg"
+  id="adsLauncher"
+  style="position:fixed; bottom:30px; right:30px; z-index:999; cursor:pointer; width:60px; border-radius:12px;"
+/>
 
 <!-- Fullscreen Form Wizard -->
-<div id="adsWizard" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#ffffff; font-family:sans-serif; z-index:1000; overflow:hidden;">
+<div id="adsWizard"
+     style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh;
+            background:#ffffff; font-family:sans-serif; z-index:1000; overflow:hidden;">
   <div style="text-align:right; padding:20px;">
     <button onclick="document.getElementById('adsWizard').style.display='none'"
-      style="font-size:20px; background:none; border:none; cursor:pointer;">&times;</button>
+            style="font-size:20px; background:none; border:none; cursor:pointer;">
+      &times;
+    </button>
   </div>
-  <div id="progressBar" style="height:10px; background:#e0e0e0; border-radius:5px; margin:0 20px 20px;">
-    <div id="progressFill" style="height:100%; width:0%; background:#009688; border-radius:5px;"></div>
+  <div id="progressBar"
+       style="height:10px; background:#e0e0e0; border-radius:5px; margin:0 20px 20px;">
+    <div id="progressFill"
+         style="height:100%; width:0%; background:#009688; border-radius:5px;">
+    </div>
   </div>
   <div id="adsStepContent" style="color:#000;"></div>
 </div>
@@ -1306,44 +1316,64 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
       container.innerHTML = `
         <h2 style="padding:0 20px;">🚀 What are you most interested in?</h2>
         <div style="display:flex; flex-wrap:wrap; gap:10px; padding:20px;">
-          ${["Starter: Ads Course","Growth: Done-With-You Setup","VIP: Done-For-You Launch Package"].map(opt =>
-            `<button onclick="adsData.interest='${opt}'; adsStep=1; renderAdsStep()" 
-              style="background:#009688; color:#fff; padding:10px 20px; border:none;">${opt}</button>`).join("")}
+          ${["Starter: Ads Course","Growth: Done-With-You Setup","VIP: Done-For-You Launch Package"]
+            .map(opt => \`
+              <button onclick="adsData.interest='${opt}'; adsStep=1; renderAdsStep()"
+                      style="background:#009688; color:#fff; padding:10px 20px; border:none;">
+                ${opt}
+              </button>\`).join("")}
         </div>`;
     } else if (adsStep === 1) {
       updateProgress(30);
       container.innerHTML = `
         <h2 style="padding:0 20px;">💰 What’s your current budget?</h2>
         <div style="display:flex; flex-wrap:wrap; gap:10px; padding:20px;">
-          ${["Under $500","$500–$1,500","$1,500–$5,000","$5,000–$20,000","$20,000+"].map(b =>
-            `<button onclick="adsData.budget='${b}'; adsStep=2; renderAdsStep()" 
-              style="background:#009688; color:#fff; padding:10px 20px; border:none;">${b}</button>`).join("")}
+          ${["Under $500","$500–$1,500","$1,500–$5,000","$5,000–$20,000","$20,000+"]
+            .map(b => \`
+              <button onclick="adsData.budget='${b}'; adsStep=2; renderAdsStep()"
+                      style="background:#009688; color:#fff; padding:10px 20px; border:none;">
+                ${b}
+              </button>\`).join("")}
         </div>`;
     } else if (adsStep === 2) {
       updateProgress(50);
       container.innerHTML = `
         <h2 style="padding:0 20px;">📊 How long have you been in business?</h2>
         <div style="display:flex; flex-wrap:wrap; gap:10px; padding:20px;">
-          ${["0–6 months","6 months – 2 years","2–5 years","5+ years"].map(y =>
-            `<button onclick="adsData.years='${y}'; adsStep=3; renderAdsStep()" 
-              style="background:#009688; color:#fff; padding:10px 20px; border:none;">${y}</button>`).join("")}
+          ${["0–6 months","6 months – 2 years","2–5 years","5+ years"]
+            .map(y => \`
+              <button onclick="adsData.years='${y}'; adsStep=3; renderAdsStep()"
+                      style="background:#009688; color:#fff; padding:10px 20px; border:none;">
+                ${y}
+              </button>\`).join("")}
         </div>`;
     } else if (adsStep === 3) {
       updateProgress(70);
       container.innerHTML = `
         <h2 style="padding:0 20px;">Free Diagnostic: What’s your website or social media page?</h2>
-        <p style="padding:0 20px;">We’ll analyze your page/site free of charge and return feedback during the live session.</p>
-        <textarea id="adsSiteInput" placeholder="Type details here..." style="width:90%; margin:20px; padding:10px; height:100px; font-size:14px;"></textarea>
-        <button onclick="adsData.site=document.getElementById('adsSiteInput').value; adsStep=4; renderAdsStep()" 
-          style="margin:0 20px 20px; background:#009688; color:#fff; padding:10px 20px; border:none;">Continue</button>`;
+        <p style="padding:0 20px;">
+          We’ll analyze your page/site free of charge and return feedback during the live session.
+        </p>
+        <textarea id="adsSiteInput" placeholder="Type details here..."
+                  style="width:90%; margin:20px; padding:10px; height:100px; font-size:14px;">
+        </textarea>
+        <button onclick="adsData.site=document.getElementById('adsSiteInput').value;
+                         adsStep=4; renderAdsStep()"
+                style="margin:0 20px 20px; background:#009688; color:#fff;
+                       padding:10px 20px; border:none;">
+          Continue
+        </button>`;
     } else if (adsStep === 4) {
       updateProgress(90);
       container.innerHTML = `
         <h2 style="padding:0 20px;">⏱️ When are you hoping to launch or improve your ads?</h2>
         <div style="display:flex; flex-wrap:wrap; gap:10px; padding:20px;">
-          ${["Within 7 days","This month","Just exploring"].map(t =>
-            `<button onclick="adsData.timeline='${t}'; adsStep=5; renderAdsStep()" 
-              style="background:#009688; color:#fff; padding:10px 20px; border:none;">${t}</button>`).join("")}
+          ${["Within 7 days","This month","Just exploring"]
+            .map(t => \`
+              <button onclick="adsData.timeline='${t}'; adsStep=5; renderAdsStep()"
+                      style="background:#009688; color:#fff; padding:10px 20px; border:none;">
+                ${t}
+              </button>\`).join("")}
         </div>`;
     } else if (adsStep === 5) {
       updateProgress(100);
@@ -1353,24 +1383,23 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
           There’s a reason our client retention is strong.
         </p>
         <div id="calendlyFrameContainer" style="width:100vw; height:100vh;">
-          <div id="calendlyFrame" style="position:absolute; top:0; left:0; width:100%; height:100%;"></div>
+          <div id="calendlyFrame"
+               style="position:absolute; top:0; left:0; width:100%; height:100%;">
+          </div>
         </div>`;
 
       const calendlyScript = document.createElement("script");
       calendlyScript.src = "https://assets.calendly.com/assets/external/widget.js";
+      calendlyScript.async = true;
       calendlyScript.onload = () => {
         Calendly.initInlineWidget({
           url: "https://calendly.com/stemsphere-support/live-ads-page-diagnostics-with-stemsphere-academy",
           parentElement: document.getElementById("calendlyFrame"),
           prefill: {
-            customAnswers: {
-              a1: adsData.interest,
-              a2: adsData.site
-            }
+            customAnswers: { a1: adsData.interest, a2: adsData.site }
           }
         });
       };
-      calendlyScript.async = true;
       document.body.appendChild(calendlyScript);
     }
   }

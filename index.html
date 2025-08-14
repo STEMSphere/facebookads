@@ -1283,7 +1283,7 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
   <div id="progressBar" style="height:10px; background:#e0e0e0; border-radius:5px; margin:0 20px 20px;">
     <div id="progressFill" style="height:100%; width:0%; background:#009688; border-radius:5px;"></div>
   </div>
-  <div id="adsStepContent" style="color:#000; height:calc(100vh - 80px); overflow-y:auto;"></div>
+  <div id="adsStepContent" style="color:#000;"></div>
 </div>
 
 <script>
@@ -1353,15 +1353,7 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
         <p style="padding:0 20px; font-size:1.1em;">
           There’s a reason our client retention is strong.
         </p>
-        <div id="calendlyFrameContainer" style="
-          width:100%;
-          height:auto;
-          max-height:calc(100vh - 120px);
-          overflow-y:auto;
-          position:relative;
-        ">
-          <div id="calendlyFrame" style="width:100%; min-height:950px;"></div>
-        </div>`;
+        <div id="calendlyFrame" style="width:100%; height:calc(100vh - 80px);"></div>`;
 
       const calendlyScript = document.createElement("script");
       calendlyScript.src = "https://assets.calendly.com/assets/external/widget.js";

@@ -21,7 +21,7 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
     
-  <!-- existing meta, title, CSS links, etc. -->
+ <!-- existing meta, title, CSS links, etc. -->
 </head>
 
   <meta charset="UTF-8" />
@@ -62,12 +62,29 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
       margin-top: 0.8em;
     }
 
+    /* fluorescent course-bar styling (same as other page) */
+    .course-bar {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4em 1em;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #00f8ff, #ff00d0);
+      font-weight: 700;
+      font-size: 0.95em;
+      color: #fff;
+      margin-top: 0.6em;
+    }
+    .course-bar span + span {
+      margin-left: 0.5em;
+    }
+
     @media (max-width: 600px) {
       .title-group span { font-size: 2em; }
       h2 { font-size: 1.2em; }
       .arrow-up { font-size: 1.8em; }
       .access-message { font-size: 1.2em; }
       .stat-message { font-size: 0.95em; }
+      .course-bar { font-size: 0.85em; }
     }
 
     main {
@@ -251,6 +268,13 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
       <span>Ads That Convert.</span>
     </div>
     <h2>Strategy → Traffic → Measurable ROI</h2>
+    <div class="course-bar">
+      <span>Starter: Ads Course</span>
+      <span>|</span>
+      <span>Growth: Done With You Ads</span>
+      <span>|</span>
+      <span>VIP:Page+ Ads Done for You</span>
+    </div>
   </header>
 
 

@@ -1267,7 +1267,7 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 </style>
 <!-- END: FAQ Section -->
 
-    <!-- 🌟 BEGIN: STEMSphere Ads Intake Wizard + Calendly Launcher -->
+<!-- 🌟 BEGIN: STEMSphere Ads Intake Wizard + Calendly Launcher -->
 
 <!-- Floating Chat Icon -->
 <img src="https://i.postimg.cc/GtB0mPMq/1000066282.jpg" id="adsLauncher"
@@ -1352,7 +1352,22 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
         <p style="padding:0 20px; font-size:1.1em;">
           There’s a reason our client retention is strong.
         </p>
-        <div id="calendlyFrameContainer" style="width:100vw; height:100vh;">
+        <div id="calendlyFrameContainer" style="width:100vw; height:100vh; position:relative;">
+          <button id="closeCalendlyBtn" style="
+            position:absolute;
+            top:20px;
+            right:20px;
+            z-index:9999;
+            background:#fff;
+            color:#000;
+            border:1px solid #ccc;
+            padding:8px 14px;
+            font-size:16px;
+            font-weight:bold;
+            border-radius:6px;
+            cursor:pointer;
+            display:none;
+          ">✕ Close</button>
           <div id="calendlyFrame" style="position:absolute; top:0; left:0; width:100%; height:100%;"></div>
         </div>`;
 
@@ -1375,6 +1390,16 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
       };
       calendlyScript.async = true;
       document.body.appendChild(calendlyScript);
+
+      window.addEventListener("message", function (e) {
+        if (e.data.event && e.data.event.indexOf("calendly") !== -1) {
+          document.getElementById("closeCalendlyBtn").style.display = "block";
+        }
+      });
+
+      document.getElementById("closeCalendlyBtn").addEventListener("click", function () {
+        document.getElementById("adsWizard").style.display = "none";
+      });
     }
   }
 </script>

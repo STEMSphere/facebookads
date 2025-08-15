@@ -694,6 +694,21 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
     padding: 3em 1.5em;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .ascii-box {
+    font-family: 'Courier New', monospace;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 1em;
+    border-radius: 8px;
+    line-height: 1.2;
+    text-align: left;
+    white-space: pre;
+    margin-bottom: 1.5em;
   }
 
   .payment-image {
@@ -705,6 +720,12 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
     max-width: 100%;
     height: auto;
     border-radius: 12px;
+  }
+
+  .payment-intro {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 1em;
   }
 
   .payment-buttons {
@@ -748,8 +769,13 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
   }
 
   @media (max-width: 600px) {
+    .payment-card {
+      padding: 2em 1em;
+    }
+    .ascii-box {
+      font-size: 0.85em;
+    }
     .payment-buttons a {
-      display: block;
       width: 90%;
       margin: 0.4em auto;
       font-size: 1em;
@@ -758,17 +784,25 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 </style>
 
 <div class="payment-card">
-  <div style="
-      text-align:center;
-      font-weight:bold;
-      font-size:1.4em;
-      margin-bottom:0.4em;
-      background: linear-gradient(135deg, #B30000, #FF4D4D, #B30000);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 2px rgba(255,0,0,0.3);
-    ">
-    Full Launch Kit Pricing
+
+  <div class="ascii-box">
+┌───────────────────────────────────────────┐
+│                Full Launch Kit           │
+│                                           │
+│   ~\$299~                       \$50        │
+│                                           │
+│   80% of our graduates level up           │
+│   and return for advanced courses—        │
+│   so we’re confident you’ll be back.      │
+│                                           │
+│   [ Enroll Now — Only \$50 ]                │
+└───────────────────────────────────────────┘
+  </div>
+
+  <div style="text-align: center; margin-bottom: 1em;">
+    <span style="color:#B30000; font-weight:600;">
+      Use code <strong>AUGZPQY</strong> at checkout
+    </span>
   </div>
 
   <div style="
@@ -778,18 +812,10 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
       margin-bottom: 0.6em;
     ">
     🚨 Limited-Time Offer —  
-    <span style="color:#B30000; font-weight:600;">
-      Use code <strong>AUGZPQY</strong> at checkout
-    </span>
-    <br>
     <span id="countdown-timer" style="color: #ff4d4d;">Loading...</span> remaining
   </div>
 
-  <div class="payment-intro" style="
-      text-align: center;
-      font-size: 1em;
-      margin-bottom: 1em;
-    ">
+  <div class="payment-intro">
     🌐 Pay in USD (converts globally), or INR or Naira
   </div>
 
@@ -799,13 +825,13 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
 
   <div class="payment-buttons">
     <a href="https://buy.stripe.com/7sY14mafDgCE21F5RB33W3x" class="btn-usa">
-      🌍 Pay $75.99 USD <span class="strike-price">$149.99</span>
+      🌍 Pay $50 USD <span class="strike-price">$299</span>
     </a>
     <a href="https://buy.stripe.com/8x214m4Vj2LO9u7a7R33W3y" class="btn-india">
-      🇮🇳 Pay ₹4,999 INR <span class="strike-price">₹13,200</span>
+      🇮🇳 Pay ₹4,150 INR <span class="strike-price">₹24,900</span>
     </a>
     <a href="https://paystack.com/buy/how-to-run-facebook-ads" class="btn-nigeria" target="_blank">
-      🇳🇬 Pay ₦49,999 Naira <span class="strike-price">₦230,000</span>
+      🇳🇬 Pay ₦20,000 Naira <span class="strike-price">₦120,000</span>
     </a>
   </div>
 </div>

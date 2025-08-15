@@ -302,7 +302,7 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
     </div>
 
     <div class="arrow-up">↑↑↑↑</div>
-    <div class="access-message">Play🔁in regular browser</div>
+    <div class="access-message">Play🔁in regular browser for best view</div>
 
     <!-- Reviews Loader Under video -->
 <div id="reviews-container" style="margin-top:1.5em;"></div>
@@ -499,8 +499,10 @@ src="https://www.facebook.com/tr?id=1251864852856693&ev=PageView&noscript=1"
       });
 
       document.getElementById('signUpBtn').addEventListener('click', () => {
-        window.location = 'https://calendly.com/stemsphere-support/live-ads-page-diagnostics-with-stemsphere-academy';
-      });
+  adsStep = 0;
+  renderAdsStep();
+  document.getElementById('adsWizard').style.display = 'block';
+    });
     });
   </script>
 </body>
